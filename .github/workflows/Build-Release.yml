@@ -1,9 +1,12 @@
 name: Build-Release
 
 on:
-  push:
-    tags:
-      - v*
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to create (e.g. v1.0.0)'
+        required: true
+        default: ''
 
 jobs:
   build:
@@ -32,8 +35,6 @@ jobs:
 
       - run: ./gradlew :gkd-app:assembleGkdRelease :gkd-app:bundlePlayRelease
         env:
-          GKD_GITHUB_COOKIE: ${{ secrets.GKD_GITHUB_COOKIE }}
-          GKD_API_AUTH_TOKEN: ${{ secrets.GKD_API_AUTH_TOKEN }}
           GKD_STORE_FILE: ${{ github.workspace }}/gkd.jks
           GKD_STORE_PASSWORD: ${{ secrets.GKD_STORE_PASSWORD }}
           GKD_KEY_ALIAS: ${{ secrets.GKD_KEY_ALIAS }}
@@ -59,16 +60,16 @@ jobs:
           path: gkd-app/build/outputs
 
       - run: |
-          cp outputs/apk/gkd/release/app-gkd-release.apk "${GITHUB_WORKSPACE}/gkd-${GITHUB_REF_NAME}.apk"
-          zip -r "${GITHUB_WORKSPACE}/outputs-${GITHUB_REF_NAME}.zip" outputs
+          cp outputs/apk/gkd/release/app-gkd-release.apk "${GITHUB_WORKSPACE}/gkd-${{ inputs.tag }}.apk"
+          zip -r "${GITHUB_WORKSPACE}/outputs-${{ inputs.tag }}.zip" outputs
         working-directory: gkd-app/build
 
       - uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
+          tag_name: ${{ inputs.tag }}
+          name: Release ${{ inputs.tag }}
           body_path: ./CHANGELOG.md
-          prerelease: ${{ contains(github.ref_name, 'beta') }}
+          prerelease: ${{ contains(inputs.tag, 'beta') }}
           fail_on_unmatched_files: true
           files: |
             gkd-*.apk
