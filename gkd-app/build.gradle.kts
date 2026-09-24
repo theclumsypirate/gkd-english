@@ -35,7 +35,7 @@ android {
             useSupportLibrary = true
         }
         androidResources {
-            localeFilters += listOf("zh-rCN", "en")
+            localeFilters += listOf("en")
         }
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")

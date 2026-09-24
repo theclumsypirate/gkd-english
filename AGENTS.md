@@ -87,10 +87,10 @@
 
 ## Internationalization (i18n)
 
-- `values/strings.xml` contains the **original Chinese** strings (default language)
-- `values-en/strings.xml` contains **English** translations
-- Android automatically selects the correct strings based on device language
-- When contributing to the original repo, only submit `values-en/strings.xml` as a PR — do NOT overwrite `values/strings.xml`
+- `values/strings.xml` contains **English** strings and is the **default language** (fallback for all locales)
+- No `values-en/` or `values-zh*` folders exist — the app is English-only; `localeFilters` in `gkd-app/build.gradle.kts` is set to `listOf("en")`
+- `UiStrings.kt` is generated from `values/strings.xml` by `GenerateUiStringsTask`
+- If re-localizing for the original repo, do NOT overwrite `values/strings.xml`; restore Chinese from upstream and submit English as a separate `values-en/strings.xml`
 
 ## Git Remote Configuration
 
