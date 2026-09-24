@@ -44,25 +44,9 @@ jobs:
           PLAY_KEY_ALIAS: ${{ secrets.PLAY_KEY_ALIAS }}
           PLAY_KEY_PASSWORD: ${{ secrets.PLAY_KEY_PASSWORD }}
 
-      - uses: actions/upload-artifact@v7
-        with:
-          name: release
-          path: gkd-app/build/outputs/apk/gkd/release
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: playRelease
-          path: gkd-app/build/outputs/bundle/playRelease
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: outputs
-          path: gkd-app/build/outputs
-
-      - run: |
-          cp outputs/apk/gkd/release/app-gkd-release.apk "${GITHUB_WORKSPACE}/gkd-${{ inputs.tag }}.apk"
-          zip -r "${GITHUB_WORKSPACE}/outputs-${{ inputs.tag }}.zip" outputs
-        working-directory: gkd-app/build
+      - name: rename apk
+        run: |
+          cp gkd-app/build/outputs/apk/gkd/release/app-gkd-release.apk "gkd-${{ inputs.tag }}.apk"
 
       - uses: softprops/action-gh-release@v3
         with:
@@ -73,4 +57,4 @@ jobs:
           fail_on_unmatched_files: true
           files: |
             gkd-*.apk
-            outputs-*.zip
+            gkd-app/build/outputs/bundle/playRelease/*.aab
