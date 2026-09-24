@@ -248,7 +248,7 @@
     <string name="category_no_matching_groups">No rule groups match this category</string>
     <string name="category_prefix_overlap">Prefix overlap: %1$s. Preview has been calculated based on existing category order.</string>
     <string name="category_removed_back_notice">Category has been removed, please return to the rule categories page</string>
-    <string name="category_save_description">After saving, calculate the default switch based on new ownership, keeping the rule group's separate configuration.</string>
+    <string name="category_save_description">After saving, calculate the default switch based on new ownership, keeping the rule group\'s separate configuration.</string>
     <string name="category_scope_includes_hidden">Include hidden apps in the filter.</string>
     <string name="category_scope_selected_only">Only process selected rule groups.</string>
     <string name="category_selected_rules_changed">Selected category rules have changed</string>
@@ -345,7 +345,7 @@
     <string name="feedback_continue_suffix">, you can click below to continue feedback</string>
     <string name="feedback_notice">Feedback Notice</string>
     <string name="feedback_report">Issue Feedback</string>
-    <string name="feedback_scope">GKD does not carry any rules by default, only accepts feedback related to the app's core functionality</string>
+    <string name="feedback_scope">GKD does not carry any rules by default, only accepts feedback related to the app\'s core functionality</string>
     <string name="feedback_subscription_notice">First determine if this is a third-party rule subscription issue. If so, you should provide feedback to the rule provider, not here.</string>
     <string name="feedback_thanks_prefix">Thank you for taking the time to provide feedback,</string>
     <string name="feedback_title">Feedback</string>
@@ -364,7 +364,7 @@
     <string name="github_cookie_label">GitHub Cookie</string>
     <string name="gkd_learn_more">Learn about GKD</string>
     <string name="global_rule_add">Add Global Rule</string>
-    <string name="global_rule_app_switch_batch_confirmation">On %1$s apps, execute %2$s? Only affects this global rule's settings in these apps, keeping the rule group master switch and page exclusions.</string>
+    <string name="global_rule_app_switch_batch_confirmation">On %1$s apps, execute %2$s? Only affects this global rule\'s settings in these apps, keeping the rule group master switch and page exclusions.</string>
     <string name="global_rule_app_switch_set">Set App Switch</string>
     <string name="global_rule_batch_setting_confirmation">%1$s rule groups are selected. Do you want to %2$s all of them?\n\nOnly adjusts the switch for selected rule groups, keeping app settings and page exclusions.</string>
     <string name="global_rule_breadcrumb">%1$s/Global Rules</string>
