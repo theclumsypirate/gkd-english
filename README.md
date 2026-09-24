@@ -1,4 +1,4 @@
-# gkd
+# gkd-english
 
 <p align="center">
 <a href="https://gkd.li/"><img src="https://e.gkd.li/2a0a7787-f2dd-4529-a885-93f3b8c857c3" alt="GKD.LI" width="40%" /></a>
