@@ -141,7 +141,7 @@
     <string name="app_rule_missing">App rule no longer exists</string>
     <string name="app_rule_summary_open">Go to the app rules summary page</string>
     <string name="app_rules">App Rules</string>
-    <string name="app_rules_batch_setting_confirmation">Do you want to %2$s all %1$s selected rule groups?\n\nGlobal rules only adjust the toggle within the current app.\nKeep the global rules master switch, app settings, and page exclusions.</string>
+    <string name="app_rules_batch_setting_confirmation">%1$s rule groups are selected. Do you want to %2$s all of them?\n\nGlobal rules only adjust the toggle within the current app.\nKeep the global rules master switch, app settings, and page exclusions.</string>
     <string name="app_rules_view_list">View app rules list</string>
     <string name="app_search_hint">Search app name or package name</string>
     <string name="app_sort_filter">Sort and Filter Apps</string>
@@ -364,9 +364,9 @@
     <string name="github_cookie_label">GitHub Cookie</string>
     <string name="gkd_learn_more">Learn about GKD</string>
     <string name="global_rule_add">Add Global Rule</string>
-    <string name="global_rule_app_switch_batch_confirmation">Execute %2$s on %1$s apps? Only affects this global rule's settings in these apps, keeping the rule group master switch and page exclusions.</string>
+    <string name="global_rule_app_switch_batch_confirmation">On %1$s apps, execute %2$s? Only affects this global rule's settings in these apps, keeping the rule group master switch and page exclusions.</string>
     <string name="global_rule_app_switch_set">Set App Switch</string>
-    <string name="global_rule_batch_setting_confirmation">Do you want to %2$s all %1$s selected rule groups?\n\nOnly adjusts the switch for selected rule groups, keeping app settings and page exclusions.</string>
+    <string name="global_rule_batch_setting_confirmation">%1$s rule groups are selected. Do you want to %2$s all of them?\n\nOnly adjusts the switch for selected rule groups, keeping app settings and page exclusions.</string>
     <string name="global_rule_breadcrumb">%1$s/Global Rules</string>
     <string name="global_rule_group_disabled">Global rule group master switch is off</string>
     <string name="global_rule_group_stats">%1$s %2$s global rule groups</string>
@@ -542,7 +542,7 @@
     <string name="rule_app_not_applicable">This rule does not apply to the current app</string>
     <string name="rule_app_or_version_mismatch">Current app or version does not meet the requirements</string>
     <string name="rule_app_version_mismatch">Current app version does not meet the rule requirements</string>
-    <string name="rule_batch_setting_confirmation_prefix">Do you want to perform %2$s on the selected %1$s rule groups?\n\n</string>
+    <string name="rule_batch_setting_confirmation_prefix">%1$s rule groups are selected. Do you want to %2$s them?\n\n</string>
     <string name="rule_builtin_app_scope">App scope built into the rule</string>
     <string name="rule_categories">Rule categories</string>
     <string name="rule_categories_view_list">View rule categories list</string>
@@ -787,7 +787,7 @@
     <string name="subscription_app_missing">Subscription app no longer exists</string>
     <string name="subscription_app_not_loaded">Subscription app not yet loaded</string>
     <string name="subscription_app_rule_counts">%1$s apps / %2$s rules</string>
-    <string name="subscription_app_switch_batch_confirmation">Apply %2$s to %1$s selected apps? Only affects the master switch for this subscription, keeping rule group and page exclusion settings.</string>
+    <string name="subscription_app_switch_batch_confirmation">To %1$s selected apps, apply %2$s? Only affects the master switch for this subscription, keeping rule group and page exclusion settings.</string>
     <string name="subscription_app_switch_scope">Master switch for this subscription apps</string>
     <string name="subscription_app_switch_set">Set app master switch</string>
     <string name="subscription_apps_rules_count">Total %1$s apps, %2$s rules</string>
