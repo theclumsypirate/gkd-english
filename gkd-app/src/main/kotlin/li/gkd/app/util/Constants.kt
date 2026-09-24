@@ -24,6 +24,6 @@ object ShortUrlSet {
     const val URL15 = "https://gkd.li?r=15"
 }
 
-const val PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=li.songe.gkd"
+const val PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=gkd.english.app"
 
 const val systemUiAppId = "com.android.systemui"
