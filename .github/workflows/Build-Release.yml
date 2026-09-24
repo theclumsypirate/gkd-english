@@ -44,10 +44,6 @@ jobs:
           PLAY_KEY_ALIAS: ${{ secrets.PLAY_KEY_ALIAS }}
           PLAY_KEY_PASSWORD: ${{ secrets.PLAY_KEY_PASSWORD }}
 
-      - name: rename apk
-        run: |
-          cp gkd-app/build/outputs/apk/gkd/release/app-gkd-release.apk "gkd-${{ inputs.tag }}.apk"
-
       - uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ inputs.tag }}
@@ -56,5 +52,4 @@ jobs:
           prerelease: ${{ contains(inputs.tag, 'beta') }}
           fail_on_unmatched_files: true
           files: |
-            gkd-*.apk
             gkd-app/build/outputs/bundle/playRelease/*.aab
