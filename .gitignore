@@ -16,6 +16,7 @@ kotlin-js-store
 
 *.jks
 *.keystore
+keystore*/README.txt
 *.apk
 *.zip
 local.properties
